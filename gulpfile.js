@@ -18,7 +18,7 @@ var src = {
 	root: './src',
 	jade: './src/jade',
 	js: '/js',
-	styl: '/styl'
+	styl: './src/styl'
 };
 
 var dest = {
@@ -44,7 +44,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('style', function(){
-	gulp.src(src.root + src.styl + '/index.styl')
+	gulp.src(src.styl + '/index.styl')
 		.pipe(stylus({
 			use: [kuoto()]
 		}))
@@ -58,7 +58,7 @@ gulp.task('open', function(){
 });
 
 gulp.task('watch', ['style', 'html'], function(){
-	gulp.watch(src.root + src.styl + '/**/*.styl', ['style']);
+	gulp.watch(src.styl + '/**/*.styl', ['style']);
 	gulp.watch(src.jade + '/**/*.jade', ['html']);
 });
 
