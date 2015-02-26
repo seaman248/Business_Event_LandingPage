@@ -24,7 +24,7 @@ var src = {
 var dest = {
 	root: './dest',
 	js: '/js',
-	css: '/styles',
+	css: './dest/styles',
 	html: '/'
 };
 
@@ -46,10 +46,10 @@ gulp.task('html', function(){
 gulp.task('style', function(){
 	gulp.src(src.styl + '/index.styl')
 		.pipe(stylus({
-			use: [kuoto()]
+			use: [kuoto()],
+			compress: true
 		}))
-		.pipe(minify())
-		.pipe(gulp.dest(dest.root + dest.css))
+		.pipe(gulp.dest(dest.css))
 		.pipe(connect.reload());
 });
 
