@@ -12,12 +12,15 @@ var gulp = require('gulp'),
 	opn = require('opn'),
 
 	browserify = require('browserify'),
-	vss = require('vinyl-source-stream');
+	vss = require('vinyl-source-stream'),
+
+	img = require('gulp-image-optimization');
 
 var src = {
 	root: './src',
 	jade: './src/jade',
 	js: '/js',
+	imgs: './src/img',
 	styl: './src/styl'
 };
 
@@ -25,6 +28,7 @@ var dest = {
 	root: './dest',
 	js: '/js',
 	css: './dest/styles',
+	img: './dest/images',
 	html: '/'
 };
 
@@ -51,6 +55,16 @@ gulp.task('style', function(){
 		}))
 		.pipe(gulp.dest(dest.css))
 		.pipe(connect.reload());
+});
+
+gulp.task('img', function(){
+	gulp.src([src.imgs + '/**/*.png', src.imgs + '/**/*.jpg', src.imgs + '/**/*.gif', src.imgs + '/**/*.jpeg'])
+		.pipe(img({
+			optimizationLevel: 5,
+			progressive: true,
+			interlaced: true
+		}))
+		.pipe(gulp.dest(dest.img))
 });
 
 gulp.task('open', function(){
