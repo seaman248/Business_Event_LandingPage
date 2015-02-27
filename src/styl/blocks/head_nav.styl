@@ -47,3 +47,26 @@ nav
 			content: '|||'
 			margin-left em(8.5)
 			color #B9B9B9
+
+
++media-query(all, min-width 640px)
+	.nav_toogle-button
+		display none
+
+	.nav-list
+		float right
+		margin-top em(-67)
+		ul
+			li
+				float left
+				a
+					line-height em(20)
+					text-transform uppercase
+					text-align center
+					font-weight 600
+					position relative
+					display block
+					color #777777
+					font-size em(12)
+					text-decoration none
+					padding em(40) em(15) 0
