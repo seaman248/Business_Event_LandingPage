@@ -1,2 +1,31 @@
 @import "kouto-swiss"
 
+nav
+	gs('fluid', 12)
+	background-color #ffffff
+	.container
+		col(12)
+
+	.logo
+		col(5)
+		padding em(12) em(5)
+
+	.menu-toggle-button
+		col(1)
+		offset(5)
+		padding em(12) em(5)
+		
+		
+
+	.menu-toggle-button::before
+		content '|||'
+		display block
+		border em(1) solid #929292
+		color #929292
+		border-radius em(6)
+		height em(35)
+		width em(35)
+		box-sizing border-box
+		cursor pointer
+		padding-top em(7)
+		padding-left em(10)
