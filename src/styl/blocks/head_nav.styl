@@ -2,6 +2,7 @@
 
 nav
 	gs('fluid', 12)
+	position fixed
 	background-color #ffffff
 	.container
 		col(12)
@@ -48,3 +49,26 @@ nav
 
 		a:hover
 			color #333333
+
++media-query( all, min-width 750px)
+	nav
+		gs('fluid', 12)
+		.container
+			col(10)
+			offset(1)
+		.logo
+			col(3)
+		.menu-toggle-button
+			display none
+		.navbar
+			col(8)
+			padding 0
+			margin 0
+			margin-top em(12)
+			border none
+			li
+				float left
+				a
+					padding em(17)
+					line-height 0
+					font-size em(16)
