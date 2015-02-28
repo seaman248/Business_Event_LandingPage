@@ -70,3 +70,28 @@
 		button
 			margin-bottom em(20)
 			cursor pointer
+
++media-query( all, min-width 900px)
+	.promo
+		.promo-banner
+			col(40)
+			offset(5)
+			margin-top em(50)
+			h1, p
+				text-align left
+				padding em(5)
+		.promo-form
+			col(30)
+			offset(15)
+			margin-top em(20)
+			margin-bottom em(20)
+
++media-query( all, min-width 1900px)
+	.promo
+		.container
+			col(80)
+			offset(10)
+			.promo-banner
+				col(30)
+				offset(10)
+				margin-top em(50)
