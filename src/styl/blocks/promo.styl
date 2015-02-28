@@ -23,15 +23,14 @@
 	.promo-baner
 		col(12)
 		color white
+		text-align center
 		h1
 			font-size em(38)
-			text-align center
 			padding em(7) 0
 			font-weight 200
 			border-bottom 1px solid white
 		p
 			font-size em(15)
-			text-align center
 			padding em(10) 0
 		p.bold
 			font-weight bold
@@ -44,7 +43,7 @@
 		input, select, button
 			col(11)
 			offset(0.5)
-			margin-top em(20)
+			margin-top em(15)
 			border-radius em(7)
 			box-sizing border-box
 			padding em(10)
@@ -56,7 +55,7 @@
 			outline none
 
 		button
-			margin-bottom em(20)
+			margin-bottom em(15)
 			cursor pointer
 		
 		button:hover
@@ -64,4 +63,20 @@
 			color rgba(0, 0, 0, 0.9)
 
 +media-query( all, min-width 900px)
-	
+	.promo
+		gs('fluid', 12)
+		margin-top 60px
+		.container
+			col(10)
+			offset(1)
+			.promo-baner
+				col(5)
+				text-align left
+				padding em(40) 0
+			.promo-form
+				col(4)
+				offset(3)
+				margin-top em(20)
+				margin-bottom em(20)
+				input, select, button
+					font-size em(16)
