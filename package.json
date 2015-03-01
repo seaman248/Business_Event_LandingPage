@@ -20,9 +20,10 @@
     "kouto-swiss": "^0.11.8",
     "opn": "^1.0.1",
     "vinyl-source-stream": "^1.0.0",
-    "kouto-swiss": "^0.11.8",
     "reactify": "^1.0.0"
   },
   "dependencies": {
+    "react": "^0.12.2",
+    "tabs": "^0.2.0"
   }
 }

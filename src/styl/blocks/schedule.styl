@@ -1,4 +1,5 @@
 .schedule
+	gs('fluid', 12)
 	margin-top em(40)
 	.container
 		h2
@@ -9,3 +10,55 @@
 			font-weight 200
 			text-align center
 			margin em(15) 0
+
+	.tab-container
+		.tab
+			col(12)
+			text-align center
+			box-sizing border-box
+			padding em(15)
+			margin-bottom em(5)
+			cursor pointer
+			border-radius em(3)
+			color #999999
+
+		.tab.active
+				background-color #eeeeee
+				color #555555
+
+		.tab:hover
+			background-color #eeeeee
+	.tab-panes
+		col(12)
+		padding em(20)
+		box-sizing border-box
+		background-color #eeeeee
+		.tab-pane
+			display none
+			
+		.active
+			display block
+
+	.accordion
+		.panel-heading
+			text-align center
+			padding em(15)
+			margin-bottom em(5)
+			background-color #ffffff
+			cursor pointer
+			border-radius em(3)
+			color #999999
+
+
++media-query( all, min-width 600px )
+	.schedule
+		gs('fluid', 12)
+		margin-top em(40)
+	.tab-container
+		col(10)
+		offset(1)
+		.tabs
+			.tab
+				col(4)
+	.tab-panes
+		col(12)
