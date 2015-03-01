@@ -67,24 +67,14 @@ gulp.task('img', function(){
 		.pipe(gulp.dest(dest.img))
 });
 
-gulp.task('js', function(){
-	var JSsrc = (src.js+'/index.js');
-	var b = browserify();
-	b.add(JSsrc);
-	b.bundle()
-		.pipe(vss('index.js'))
-		.pipe(gulp.dest(dest.js))
-		.pipe(connect.reload())
-});
-
 gulp.task('open', function(){
 	opn('http://localhost:'+reloadPort, 'chromium-browser');
 });
 
-gulp.task('watch', ['style', 'html', 'js'], function(){
+gulp.task('watch', ['style', 'html'], function(){
 	gulp.watch(src.styl + '/**/*.styl', ['style']);
 	gulp.watch(src.jade + '/**/*.jade', ['html']);
-	gulp.watch(src.js + '/**/*.js', ['js']);
+	gulp.watch('./dest/js/index.js', ['html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'open']);

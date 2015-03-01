@@ -22,6 +22,8 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "dependencies": {
-    "kouto-swiss": "^0.11.8"
+    "kouto-swiss": "^0.11.8",
+    "tabslet": "^1.4.6",
+    "zepto-browserify": "^1.1.3-0"
   }
 }
