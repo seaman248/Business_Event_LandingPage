@@ -19,14 +19,14 @@ var gulp = require('gulp'),
 var src = {
 	root: './src',
 	jade: './src/jade',
-	js: '/js',
+	js: './src/js',
 	imgs: './src/img',
 	styl: './src/styl'
 };
 
 var dest = {
 	root: './dest',
-	js: '/js',
+	js: './dest/js',
 	css: './dest/styles',
 	img: './dest/images',
 	html: '/'
@@ -67,13 +67,24 @@ gulp.task('img', function(){
 		.pipe(gulp.dest(dest.img))
 });
 
+gulp.task('js', function(){
+	var JSsrc = (src.js+'/index.js');
+	var b = browserify();
+	b.add(JSsrc);
+	b.bundle()
+		.pipe(vss('index.js'))
+		.pipe(gulp.dest(dest.js))
+		.pipe(connect.reload())
+});
+
 gulp.task('open', function(){
 	opn('http://localhost:'+reloadPort, 'chromium-browser');
 });
 
-gulp.task('watch', ['style', 'html'], function(){
+gulp.task('watch', ['style', 'html', 'js'], function(){
 	gulp.watch(src.styl + '/**/*.styl', ['style']);
 	gulp.watch(src.jade + '/**/*.jade', ['html']);
+	gulp.watch(src.js + '/**/*.js', ['js']);
 });
 
 gulp.task('default', ['connect', 'watch', 'open']);
