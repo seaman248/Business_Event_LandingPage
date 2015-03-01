@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 
 	browserify = require('browserify'),
 	vss = require('vinyl-source-stream'),
+	reactify = require('reactify'),
 
 	img = require('gulp-image-optimization');
 
@@ -67,6 +68,16 @@ gulp.task('img', function(){
 		.pipe(gulp.dest(dest.img))
 });
 
+gulp.task('js', function(){
+	var b = browserify();
+	b.transform(reactify);
+	b.add('./src/jsx/index.jsx');
+	b.bundle()
+		.pipe(vss('index.js'))
+		.pipe(gulp.dest('./dest/js'))
+		.pipe(connect.reload());
+});
+
 gulp.task('open', function(){
 	opn('http://localhost:'+reloadPort, 'chromium-browser');
 });
@@ -74,7 +85,7 @@ gulp.task('open', function(){
 gulp.task('watch', ['style', 'html'], function(){
 	gulp.watch(src.styl + '/**/*.styl', ['style']);
 	gulp.watch(src.jade + '/**/*.jade', ['html']);
-	gulp.watch('./dest/js/index.js', ['html']);
+	gulp.watch('./src/jsx/**/*.jsx', ['js']);
 });
 
 gulp.task('default', ['connect', 'watch', 'open']);
