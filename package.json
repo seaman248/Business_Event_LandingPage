@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "react": "^0.12.2",
+    "react-carousel": "^1.4.1",
     "tabs": "^0.2.0"
   }
 }
