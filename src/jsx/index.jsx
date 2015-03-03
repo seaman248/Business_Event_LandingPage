@@ -1,5 +1,2 @@
-var tabs = require('tabs');
-
-var container = document.querySelector('.tab-container');
-
-tabs(container);
+// Non React
+var tabs = require('./ui/tabs.jsx');
