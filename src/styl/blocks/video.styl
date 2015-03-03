@@ -1,19 +1,25 @@
 .video
+	background-color #eeeeee
+	gs('fluid', 12)
+	padding em(30)
+	box-sizing border-box
 	.container
-		gs('fluid', 12)
-		row()
+		col(11)
+		offset(0.5)
+	.video-content
+		background-color #fff
 		col(12)
-		.video-content
-			border-radius 3px
-			background-color #FFF
-			border 1px solid #eeeeee
-			.video-container
-				padding-top: 56.25%;
-				width 100%
-				position relative
-				padding 0
-				iframe
-					position absolute
-					top 0
-					left 0
-					size 100%
+		margin 0
+		padding em(20)
+		box-sizing border-box
+	.video-container
+		width 100%
+		position relative
+		padding 0
+		padding-top 56.2%
+		iframe
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
