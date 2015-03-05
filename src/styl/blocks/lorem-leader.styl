@@ -1,6 +1,8 @@
 .lorem-leader
 	gs('fluid', 12)
 	background-color #eeeeee
+	padding em(10)
+	box-sizing border-box
 	.container
 		col(12)
 	.thesis
@@ -11,9 +13,10 @@
 		text-align center
 		i
 			border 1px solid #555555
-			padding em(3)
+			padding em(10)
 			color #555555
 			border-radius em(2.6)
+			font-size 2.5em
 	h3
 		text-align center
 		font-size em(28)
@@ -24,3 +27,19 @@
 		margin em(10)
 		font-weight 200
 		text-align center
+
++media-query( all, min-width 640px )
+	.lorem-leader
+		.container
+			col(11)
+			offset(0.5)
+		.thesis
+			col(6)
+
++media-query( all, min-width 940px )
+	.lorem-leader
+		.container
+			col(11)
+			offset(0.5)
+		.thesis
+			col(3)
