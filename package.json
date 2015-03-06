@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "react": "^0.12.2",
+    "react-bootstrap": "^0.16.1",
     "tabs": "^0.2.0"
   }
 }
