@@ -65,3 +65,15 @@
 		background-color #e74c3c
 	.professional
 		background-color #fd8a21
++media-query ( all, min-width 500px )
+	.pricing_tables
+		._container
+			gs('fluid', 12)
+		.p_table
+			col(6)
++media-query( all, min-width 960px )
+	.pricing_tables
+		._container
+			gs('fixed', 12, 75px, 0px)
+		.p_table
+			col(3)
