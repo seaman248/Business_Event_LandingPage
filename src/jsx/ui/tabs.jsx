@@ -1,1 +1,0 @@
-require('tabs')(document.querySelector('.tab-container'));
