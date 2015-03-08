@@ -1,20 +1,20 @@
 .schedule
-	gs('fluid', 12)
 	margin-top em(40)
 	border-top 1px solid #eeeeee
 	border-bottom 1px solid #eeeeee
 	padding-top em(20)
 	padding-bottom em(20)
 	clearfix()
-	.container
-		h2
-			font-size em(36)
-			text-align center
-		p.subHead
-			font-size em(18)
-			font-weight 200
-			text-align center
-			margin em(15) 0
+	._container
+		gs('fluid', 12)
+	h2
+		font-size em(36)
+		text-align center
+	p.subHead
+		font-size em(18)
+		font-weight 200
+		text-align center
+		margin em(15) 0
 
 	.tab-container
 		.tab
@@ -55,15 +55,13 @@
 			color #999999
 
 
-+media-query( all, min-width 600px )
++media-query( all, min-width 960px )
 	.schedule
-		gs('fluid', 12)
-		margin-top em(40)
-	.tab-container
-		col(10)
-		offset(1)
-		.tabs
-			.tab
-				col(4)
-	.tab-panes
-		col(12)
+		._container
+			gs('fixed', 12)
+		.tab-container
+			.tabs
+				.tab
+					col(4)
+		.tab-panes
+			col(12)

@@ -7,19 +7,19 @@
 	display block
 	position absolute
 	background-color rgba(45, 157, 231, 0.4)
+	top 0
+	z-index 0
 
 .promo
-	gs('fluid', 12)
-	height auto
 	margin-top 60px
 	background url(/images/promo.jpg)
 	background-repeat no-repeat
 	background-position center center
 	position relative
-	.container
-		col(12)
+	._container
+		gs('fluid', 12)
 		position relative
-		z-index 20
+		z-index 3
 	.promo-baner
 		col(12)
 		color white
@@ -68,36 +68,16 @@
 			background-color white
 			color rgba(0, 0, 0, 0.9)
 
-+media-query( all, min-width 900px)
++media-query( all, min-width 1200px )
 	.promo
-		gs('fluid', 12)
-		margin-top 60px
-		.container
-			col(10)
-			offset(1)
-			.promo-baner
-				col(5)
-				text-align left
-				padding em(40) 0
-				p
-					font-size em(16)
-			.promo-form
-				col(4)
-				offset(3)
-				margin-top em(20)
-				margin-bottom em(20)
-				input, select, button
-					font-size em(16)
-
-+media-query( all, min-width 2000px)
-	.promo
-		.container
-			col(9)
-			offset(1.5)
-			.promo-baner
-				col(4)
-			.promo-form
-				col(3)
-				offset(4.5)
-				margin-top em(20)
-				margin-bottom em(20)
+		._container
+			gs('fixed', 12, 80px)
+		.promo-baner
+			col(6)
+			text-align left
+			padding-top em(30)
+		.promo-form
+			col(4.3)
+			offset(1.7)
+			margin-top em(20)
+			margin-bottom em(20)

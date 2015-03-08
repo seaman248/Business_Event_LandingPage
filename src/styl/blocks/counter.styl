@@ -5,15 +5,15 @@
 	clearfix()
 	.container
 		gs('fluid', 12)
-		col(12)
 	.countdown
 		.countdown__item
 			col(6)
-			margin-top em(40)
+			display inline-block
+			padding-top em(25)
 			h3
 				font-size em(36)
-				size 150px
-				line-height 150px
+				size em(50)
+				line-height em(50)
 				border-radius 50%
 				border 1px solid #AFAFAF
 				margin: 0 auto 15px;
@@ -52,17 +52,15 @@
 			.social-button:hover
 				background-color #eeeeee
 
-+media-query( all, min-width 1170px )
++media-query( all, min-width 960px )
 	.counter
 		.container
-			gs('fluid', 12)
-			col(10)
-			offset(1)
+			gs('fixed', 12)
 		.countdown
 			col(8)
 			margin-top em(20)
 			.countdown__item
-				col(3)
+				col(1.7)
 		.count-baner
-			col(4)
+			col(3.6)
 			padding em(45) 0

@@ -1,13 +1,12 @@
 .video
 	background-color #eeeeee
-	gs('fluid', 12)
 	padding em(10)
 	box-sizing border-box
+	clearfix()
 	.container
-		col(12)
+		gs('fluid', 12)
 	.video-content
 		background-color #fff
-		col(12)
 		margin 0
 		padding em(18)
 		box-sizing border-box
@@ -47,12 +46,11 @@
 	.video
 		padding em(25) 0
 		.container
-			col(11)
-			offset(0.5)
+			gs('fixed', 12)
 		.video-content
-			col(6)
+			col(5.8)
 		.video-banner
-			col(6)
+			col(5.8)
 			padding em(20)
 			box-sizing border-box
 			p

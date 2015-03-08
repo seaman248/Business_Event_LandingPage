@@ -1,9 +1,6 @@
 .photos
-	gs('fluid', 12)
-	padding em(20) 0
-	box-sizing border-box
 	.container
-		col(12)
+		gs('fluid', 12)
 	.photo-banner
 		font-weight 200
 		color #3c3c3c
@@ -29,16 +26,15 @@
 +media-query( all, min-width 900px)
 	.photos
 		.container
-			col(11)
-			offset(0.5)
+			gs('fixed', 12)
 		.photo-banner
-			col(6)
+			col(5.8)
 			padding em(15)
 			box-sizing border-box
 			p
 				font-size em(16)
 				padding em(3)
 		.carousel-block
-			col(6)
+			col(5.8)
 			padding em(15)
 			box-sizing border-box
