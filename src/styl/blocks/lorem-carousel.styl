@@ -2,26 +2,27 @@
 	background-image url(../images/smiling-portraits.jpg)
 	background-position center center
 	background-repeat no-repeat
-	height em(250)
+	height em(150)
 	.container::before
 		content ''
 		display block
 		background-color rgba(85, 85, 85, 0.9)
 		width 100%
-		height em(250)
+		height em(150)
 		position absolute
 	.container
 		width 100%
 		padding 0
 	.carousel
 		position relative
+		padding em(30)
 	.carousel-caption
 		color #fff
 		position relative
 		right auto
 		left auto
 	.carousel-indicators
-		top em(90)
+		top em(120)
 		li
 			width em(30)
 	blockquote
@@ -31,3 +32,8 @@
 		border-left none
 		footer
 			color #fff
+
++media-query ( all, min-width 880px )
+	.lorem-carousel
+		.carousel
+			padding em(40)

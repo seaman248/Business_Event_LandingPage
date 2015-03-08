@@ -6,23 +6,23 @@ header
 	width 100%
 	top 0
 	left 0
-nav
+.nav
 	gs('fluid', 12)
 	border-bottom 1px solid #eeeeee
-	.container
+	._container
 		col(12)
 
-	.logo
+	._logo
 		col(5)
 		padding em(12) em(5)
 
-	.menu-toggle-button
-		col(1)
+	._menu-toggle-button
+		col(2)
 		offset(5)
 		padding em(12) em(10)
 		float right
 
-	.menu-toggle-button::before
+	._menu-toggle-button::before
 		content '|||'
 		float right
 		display block
@@ -38,7 +38,7 @@ nav
 		padding-left em(11)
 
 
-	.navbar
+	._navbar
 		col(12)
 		border-top 1px solid #888888
 		display none
@@ -58,16 +58,16 @@ nav
 			color #333333
 
 +media-query( all, min-width 760px)
-	nav
+	.nav
 		gs('fluid', 12)
-		.container
+		._container
 			col(10)
 			offset(1)
-		.logo
+		._logo
 			col(3)
-		.menu-toggle-button
+		._menu-toggle-button
 			display none
-		.navbar
+		._navbar
 			col(8)
 			padding 0
 			margin 0
@@ -84,5 +84,5 @@ nav
 					font-size em(16)
 
 +media-query ( all, min-width 960px )
-	nav
+	.nav
 		gs('fixed')
